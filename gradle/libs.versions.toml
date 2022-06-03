@@ -1,0 +1,45 @@
+[versions]
+adventure = "4.11.0"
+
+[plugins]
+spring-boot = "org.springframework.boot:2.7.0"
+
+licenser = "org.cadixdev.licenser:0.6.1"
+
+[libraries]
+jetbrains-annotations = "org.jetbrains:annotations:23.0.0"
+
+spring-boot-starter-web.module = "org.springframework.boot:spring-boot-starter-web"
+spring-boot-starter-tomcat.module = "org.springframework.boot:spring-boot-starter-tomcat"
+spring-boot-starter-undertow.module = "org.springframework.boot:spring-boot-starter-undertow"
+spring-boot-starter-logging.module = "org.springframework.boot:spring-boot-starter-logging"
+spring-boot-starter-security.module = "org.springframework.boot:spring-boot-starter-security"
+spring-boot-starter-log4j2.module = "org.springframework.boot:spring-boot-starter-log4j2"
+spring-boot-starter-actuator.module = "org.springframework.boot:spring-boot-starter-actuator"
+spring-boot-starter-test.module = "org.springframework.boot:spring-boot-starter-test"
+
+guava = "com.google.guava:guava:31.1-jre"
+
+owasp-html-sanitizer = "com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20211018.2"
+
+disruptor = "com.lmax:disruptor:3.4.4"
+
+junit-bom = "org.junit:junit-bom:5.8.2"
+junit-jupiter-api.module = "org.junit.jupiter:junit-jupiter-api"
+junit-jupiter-engine.module = "org.junit.jupiter:junit-jupiter-engine"
+
+[libraries.adventure-api]
+module = "net.kyori:adventure-api"
+version.ref = "adventure"
+
+[libraries.adventure-textSerializer-gson]
+module = "net.kyori:adventure-text-serializer-gson"
+version.ref = "adventure"
+
+[libraries.adventure-textSerializer-legacy]
+module = "net.kyori:adventure-text-serializer-legacy"
+version.ref = "adventure"
+
+[libraries.adventure-textSerializer-plain]
+module = "net.kyori:adventure-text-serializer-plain"
+version.ref = "adventure"

@@ -1,0 +1,26 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches: [ 'master' ]
+
+env:
+  IMAGE_NAME: octylfractal/transcode-talker
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: octylfractal
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: ${{ env.IMAGE_NAME }}:latest
