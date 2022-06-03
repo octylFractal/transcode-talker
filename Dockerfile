@@ -1,8 +1,8 @@
-FROM openjdk:17-alpine AS gradle_build
+FROM openjdk:18-alpine AS gradle_build
 COPY . /
 RUN ["./gradlew", "-si", "build", "installDist"]
 
-FROM openjdk:17-alpine
+FROM openjdk:18-alpine
 RUN addgroup -g 1001 -S transcode_talker && adduser -u 1001 -S transcode_talker -G transcode_talker
 RUN mkdir /transcode_talker && chown -R transcode_talker:transcode_talker /transcode_talker
 WORKDIR /transcode_talker
