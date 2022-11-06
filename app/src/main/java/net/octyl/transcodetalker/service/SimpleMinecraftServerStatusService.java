@@ -100,12 +100,18 @@ public class SimpleMinecraftServerStatusService implements MinecraftServerStatus
                     ? UsableComponent.NONE
                     : deserializeComponent(responseContent.description);
                 return new MinecraftServerStatus.Online(
+                    responseContent.version.name,
+                    responseContent.players.online,
+                    responseContent.players.max,
                     componentResult,
                     latencyInt
                 );
             } catch (JacksonException e) {
                 LOGGER.warn("Failed to parse response", e);
                 return new MinecraftServerStatus.Online(
+                    "Unknown",
+                    0,
+                    0,
                     UsableComponent.NONE,
                     latencyInt
                 );

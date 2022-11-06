@@ -2,7 +2,7 @@
 adventure = "4.11.0"
 
 [plugins]
-spring-boot = "org.springframework.boot:2.7.0"
+spring-boot = "org.springframework.boot:2.7.5"
 
 licenser = "org.cadixdev.licenser:0.6.1"
 
@@ -20,11 +20,11 @@ spring-boot-starter-test.module = "org.springframework.boot:spring-boot-starter-
 
 guava = "com.google.guava:guava:31.1-jre"
 
-owasp-html-sanitizer = "com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20211018.2"
+owasp-html-sanitizer = "com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20220608.1"
 
 disruptor = "com.lmax:disruptor:3.4.4"
 
-junit-bom = "org.junit:junit-bom:5.8.2"
+junit-bom = "org.junit:junit-bom:5.9.1"
 junit-jupiter-api.module = "org.junit.jupiter:junit-jupiter-api"
 junit-jupiter-engine.module = "org.junit.jupiter:junit-jupiter-engine"
 

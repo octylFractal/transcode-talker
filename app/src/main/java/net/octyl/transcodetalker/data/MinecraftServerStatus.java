@@ -21,7 +21,13 @@ package net.octyl.transcodetalker.data;
 public sealed interface MinecraftServerStatus {
     boolean isOnline();
 
-    record Online(UsableComponent motd, int latency) implements MinecraftServerStatus {
+    record Online(
+        String version,
+        int players,
+        int maxPlayers,
+        UsableComponent motd,
+        int latency
+    ) implements MinecraftServerStatus {
         @Override
         public boolean isOnline() {
             return true;
